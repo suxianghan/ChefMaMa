@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>My Homepage</title>
+        <link href="css/result.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        
+    </head>
+    <body>
+        <div class= "section">
+            <div class="top-border left"></div>
+            <div class="top-border right"></div>
+            <div id = "search-ingre"><h1><span>ChefMaMa Primier menu</span></h1>
+                </div>
+        <div id = "tester"></div>
+        </div>
+    </body>
+    <script>
+        var animated_key = 0;
+        var test_dict = {}
+        var list = sessionStorage.getItem('list');
+        var energy = list.split(",");
+        for (var iterater = 0; iterater<energy.length;iterater++)
+            $('<p>'+energy[iterater]+'<p>').appendTo("#description");
+        $.getJSON('http://localhost:8888/chefmama-master/data.json', function (js) {
+            var hashtale = {}
+            for (var iterater = 0; iterater<energy.length;iterater++)
+            {
+                hashtale[energy[iterater]] = 0;
+            }
+            var uni = true;
+            for (var key in js) {
+                if (js.hasOwnProperty(key)) {
+                    uni = true;
+                    for(var starter in hashtale){
+                        hashtale[starter] = 0;
+                    }
+                    for(var ingre_key in js[key][0]){
+                        for(var starter in  hashtale){
+                            if(js[key][0][ingre_key].originalString.includes(starter)){
+                                hashtale[starter] = 1;
+                                break;
+                            }
+                        }    
+                    }
+                    for(var starter in hashtale){
+                        if(hashtale[starter] == 0){
+                            uni = false;
+                        }        
+                    }
+                    if(uni == true){
+                        $("#tester").append('<p id = '+animated_key+' onclick="f1(this)">'+key+"</p>");
+                        animated_key += 1;
+                    }
+                }
+            }
+        }
+      );
+        function f1(objButton){  
+            var choice = $("#"+objButton.id).text();
+            alert(choice);
+            window.location = "recipe.html";
+            sessionStorage.setItem('choice', choice);
+        }
+         $('#search-ingre').on('click', function(){
+            sessionStorage.setItem('list', list);
+            window.location.href='index.html';
+        });
+    </script>
+</html>

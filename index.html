@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>My Homepage</title>
+    <link href="css/font.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div class = "afk-animations">
+<header class="site__header island">
+  <div class="wrap">
+   <span id="animationSandbox"><h1 class="site__title ">ChefMaMa</h1></span>
+    <span class=" subhead">Incredible ingredient-recipe navigation</span>
+  </div>
+</header><!-- /.site__header -->
+<div class = "background">
+<main class="site__content island" role="content">
+  <div class="wrap">
+    <form id = "ingre-form">
+      <select class="input" onchange="selectItem(this)">
+        <optgroup label="Bouncing Entrances">
+            <option value="bounceIn">--Default Ingredients--</option>
+            <option value="chicken">chicken</option>
+            <option value="meat">meat</option>
+            <option value="sugar">sugar</option>
+            <option value="onion">onion</option>
+            <option value="milk">milk</option>
+            <option value="water">water</option>
+            <option value="cs125">cs125</option>
+        </optgroup>
+      </select>
+      <button class="butt" id = "post"  type="button">MAGIC</button>
+      
+    </form>
+    <div id="item-data">
+    </div>
+    <hr />
+    <p class="meta"><a href="https://raw.github.com/daneden/animate.css/master/animate.css" download="animate.css">See our previous version</a> or <a href="//github.com/daneden/animate.css">Download our Source code</a></p>
+    <p><small>A semester-long project from <a href="contact.html">CS196</a>.</small></p>
+    <div id = "term-result">
+        <p><small>Here are the result history array of the Ingredients</small></p>
+      </div>
+  </div>
+    <a href="javascript:void(0);" id="store">Store Array</a>
+</main>
+    </div>
+    </div>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script>
+
+		var list = new Array();
+        var begin = false;
+        var coup = 0;
+        var afk = $(".afk-animations");
+        $('#post').on('click', function(){
+            sessionStorage.setItem('list', list);
+            window.location.href='result.html';
+        });
+		function selectItem(self){
+            if(begin == false){
+                begin = true;
+                $("#ingre-form").prepend('<button class="butt afk_butt">CLEAR</button>')
+            }
+			if(self.value!='Cuisine Type' && self.value!='Protein Type' &&  self.value!='Vegetables Type'){
+				if(list.indexOf(self.value)<=-1){
+					list.push(self.value);
+                    $('#item-data').append('<button class="butt afk_butt">'+self.value+"</button>");
+					//$('#item-data').append('<span onclick="delItem(this)" data="'+self.value+'">'+self.value+'<i>X</i></span>');
+                    $('#term-result').html('<p><small>'+list+'</small></p>');
+                    coup++;
+                    if(coup == 3){
+                        $('#item-data').append('<br>');
+                        coup = 0;
+                    }
+				}
+                
+			}
+            localStorage.setItem('list', window.JSON.stringify(list));
+		}
+        function wait(ms){
+           var start = new Date().getTime();
+           var end = start;
+           while(end < start + ms) {
+             end = new Date().getTime();
+          }
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>My Homepage</title>
+        <link href="recipe_style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet prefetch" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+            <div class="jumbotron">
+                    <div class="container">
+
+                            <div class="main" id="recipe_name">
+                            </div>
+                    </div>
+            </div>
+
+            <div class="supporting">
+                    <div class="container">
+                            <h2><strong>Ingredients:</strong></h2>
+                            <p>Here are the ingredients you need for normal serving.</p>
+                            <hr class = "divider"/>
+                            <div class="row" id = "ingredients">
+                                    <div class="col-md-2">
+                                            <div class="image">
+                                                    <img src="https://spoonacular.com/cdn/ingredients_100x100/white-powder.jpg">
+                                                    <div class="originalString">
+                                                        <p> 1 teaspoon baking powder </p>
+                                                    </div>
+                                            </div>
+                                    </div>
+                            </div>
+                            <hr class = "divider"/>
+                    </div>
+            </div>
+
+            <!-- Recipe Instructions-->
+            <!--并不知道怎么Remove Json Strong 里的 Back Slah, GG -->
+            <div class="container" id = "description">
+            </div>
+
+
+            <!--"这里是Footer 你觉得需要就Uncomment"-->
+
+            <div class="footer">
+                    <div class="container">
+                            <hr class = "divider"/>
+                            <div class="row">
+                                    <div class = "footer">
+                                            <h3>Contact</h3>
+                                            <ul>
+                                                    <a href = "https://github.com/Zippylicious/ChefMama">
+                                                        <li>GitHub</li>
+                                                    </a>
+                                                    <a href = "https://www.facebook.com/groups/178017579300567/">
+                                                        <li>Facebook</li>
+                                                    </a>
+                                            </ul>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+    </body>
+    <script>
+        var choice = sessionStorage.getItem('choice');
+        $("#recipe_name").html('<div class="main" id="recipe_name"><a href="https://github.com/Zippylicious/ChefMama" rel="nofollow" data-hover="ChefMaMa"><h1>'+choice+'</h1></a></div>');
+        $.getJSON('http://localhost:8888/chefmama-master/data.json', function (js) {
+            for (var ingre_key in js[choice][0]){
+                $("#ingredients").append('<div class="col-md-2"><div class="image"><img src="'+js[choice][0][ingre_key].image+'"><div class="originalString">'+'<p> '+js[choice][0][ingre_key].originalString+'</p></div></div></div>');
+            }
+            var description = js[choice][1].replace(/\\\//g, "/");
+            $("#description").append(description);
+        }
+      );
+    </script>
+</html>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+html, body {
+        background-color: white; 
+        font-family:"Aref Ruqaa"; 
+        font-weight:300; 
+        margin: 0;
+        padding: 0;
+      }
+      .jumbotron {
+        background-color: #D7EEE2;
+      }
+				 .jumbotron img {
+						border: .1em solid green;
+					 	width: 8%;
+				}
+      .jumbotron h1 {
+        color:#000;
+        font-weight:400; 
+        margin-top:0em; 
+        margin-bottom:.5em;  
+      }
+      .main,
+      .supporting h2,
+      .supporting p {
+          padding-bottom: .5em;
+        color:#000;
+      }
+
+      .supporting {
+        padding-bottom: .5em; 
+      }
+
+      .supporting h2{
+        font-family: Aref Ruqaa;
+						color:#000;
+        margin-top:1em; 
+        margin-bottom: .75em;
+        font-size: 2.5em;
+      }
+      .image img {
+        height: 100px;
+        width: 100px;
+}
+      .supporting p {
+        margin-bottom: .5em;
+						font-family: Arial;
+        font-size: 1em;
+      }
+
+				.divider {
+  					border: 0;
+  					border-top: .1em dotted #8c8c8c;
+				}
+
+      .supporting .thumbnail {
+        background:transparent; 
+        border-style: solid;
+        padding: 0;
+      }
+
+
+      /* recipeInstructions */
+				 /* reference删掉 谢谢: http://codeitdown.com/ordered-list-css-styles/ */
+      .recipeInstructions {
+						*list-style: decimal;
+						margin: 0;
+						margin-left: 3em;
+						padding: 0;
+						counter-reset: li-counter;
+      }
+				
+				.recipeInstructions li{
+						list-style-type: none;
+						position: relative;
+						margin-bottom: 1em;
+						padding-left: 0.5em;
+						min-height: 1em;
+						border-left: 0.15em solid #CCCCCC;
+						
+						font-family: Arial;
+						font-size: 
+				}
+				.recipeInstructions li:before {
+						position: absolute;
+						top: 0;
+						left: -1em;
+						width: 0.8em;
+
+						font-size: 1.5em;
+						line-height: 1;
+						font-weight: bold;
+						text-align: right;
+						color: #464646;
+
+						content: counter(li-counter);
+						counter-increment: li-counter;
+				}
+
+				/* footer */
+				
+      .footer {
+        background:#F3FBF3;
+        padding-top: 1em;
+						padding-left: 3em;
+						padding-bottom: 3em;
+						padding-right: 0em;
+      }
+      .footer h3 {
+        color:#354034;
+        font-size:2em;
+        font-weight:300;  
+      }
+
+
+					.footer li {
+						color:#354034; 
+      }

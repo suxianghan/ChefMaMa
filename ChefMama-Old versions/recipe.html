@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>My Recipe</title>
+<link href="css/font.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.slidertron-1.0.js"></script>
+</head>
+<body>
+<div id="wrapper" class="bg">
+	<div id="header-wrapper" style="height:auto;">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#"><b>Project: ChefMama</b></a></h1>
+				<p>Design by <a href="index.html" rel="nofollow">Team ChefMama</a></p>
+			</div>
+		</div>
+		<div id="menu-wrapper">
+			<ul id="menu">
+				<li class="current_page_item"><a href="index.html"><span>Homepage</span></a></li>
+				<li><a href="recipe.html"><span>Recipe</span></a></li>
+				<li><a href="#"><span>Ingredients</span></a></li>
+				<li><a href="#"><span>Gourmet Master</span></a></li>
+				<li><a href="#"><span>Recipe Ranking</span></a></li>
+				<li><a href="contact.html"><span>Contact</span></a></li>
+			</ul>
+			<script type="text/javascript">
+			$('#menu').dropotron();
+		</script> 
+		</div>
+		<!-- end #menu -->
+
+	<form class="form-wrapper" action="recipe.html" style="margin:20px auto;">
+			<!--<input type="text" id="search" placeholder="Search for BBQ Ribs, California Roll, Mapo Tofu ..." required>-->
+		<select style="width:210px;height: 40px;font-size: 18px;" onchange="selectItem(this)">
+		    <option>Cuisine Type</option>
+			<option>American</option>
+			<option>Chinese</option>
+			<option>Indian</option>
+			<option>Italian</option>
+			<option>Japanese</option>
+			<option>Thai</option>
+			<option>Mexican</option>
+			<option>Thai</option>			
+		</select>
+		<select style="width:210px;height: 40px;font-size: 18px;" onchange="selectItem(this)">
+			<option>Protein Type</option>
+			<option>Beef</option>
+			<option>Chicken</option>
+			<option>Egg</option>
+			<option>Ham</option>
+			<option>Lamb</option>
+			<option>Milk</option>
+			<option>Pork</option>
+			<option>Steak</option>
+			<option>Salami</option>
+			<option>Sausages</option>
+		</select>
+		<select style="width:220px;height: 40px;font-size: 18px;" onchange="selectItem(this)">
+		    <option>Vegetables Type</option>
+			<option>Aubergine</option>
+			<option>Broccoli</option>
+			<option>Carrot</option>
+			<option>Garlic</option>
+			<option>Jerusalem artichoke</option>
+			<option>Mushroom</option>
+			<option>Pepper</option>
+			<option>Pumpkin</option>
+			<option>Watercress</option>
+		</select>
+	</form>
+	<form id="search-ipt" class="form-wrapper" action="recipe.html" style="margin-top: 10px; margin-bottom: 0">
+	<input type="submit" value="search" id="submit">
+		<div id="item-data">
+			
+		</div>
+		
+	</form>
+
+	<div class="food-list auto">
+
+		<ul class="clearfix">
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="blueberry pancake"><img src="foodImg/blueberry_pancake.jpg"  width="194" height="150" alt="blueberry pancake"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="blueberry pancake">blueberry pancake</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Broccoli Shrimp and Carrots"><img src="foodImg/Broccoli_Shrimp_and_Carrots.jpg"  width="194" height="150" alt="Broccoli Shrimp and Carrots"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Broccoli Shrimp and Carrots">Broccoli Shrimp and Carrots</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+			
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Brown Chocolate Cupcake"><img src="foodImg/Brown_Chocolae_Cupcake.jpg"  width="194" height="150" alt="Brown Chocolate Cupcake"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Brown Chocolate Cupcake">Brown Chocolate Cupcake</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Brown Fish Fillet"><img src="foodImg/Brown_Fish_Fillet.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Brown Fish Fillet">Brown Fish Fillet</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+			</li>
+
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Cook Crabs"><img src="foodImg/Cook_Crabs.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Cook Crabs">Cook Crabs</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="cream soup"><img src="foodImg/cream_soup.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="cream soup">cream soup</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Grilled Chicken with rice"><img src="foodImg/Grilled_Chicken_with_rice.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Grilled Chicken with rice">Grilled Chicken with rice</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Pork Barbecue"><img src="foodImg/Pork_Barbecue.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Pork Barbecue">Pork Barbecue</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="sandwich"><img src="foodImg/sandwich.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="sandwich">sandwich</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Spaghetti"><img src="foodImg/Spaghetti.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Spaghetti">Spaghetti</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Vegetarian Pizza"><img src="foodImg/Vegetarian_Pizza.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Vegetarian Pizza">Vegetarian Pizza</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+
+			</li>
+
+
+			<li>
+				<div class="picList">
+						<p class="bigimg"> <a href="#" target="_blank" title="Spinach, chicken & pomegranate salad"><img src="foodImg/Spinach_chicken_pomegranate salad.jpg"  width="194" height="150" alt="Brown Fish Fillet"></a></p>
+						<p class="f14 mgt5"><a href="#" target="_blank" title="Spinach, chicken & pomegranate salad">Spinach, chicken & pomegranate salad</a></p>
+						<p class="box"> <a href="#" class="fl btn_orange dbtn dbtn_n like_click" id="l_1117942"><i class="ico20 allIco1">&nbsp;</i>Like</a> <span class="fl dbcl dbcl_orange"><i class="ico12 allIco3">&nbsp;</i><span class="num">2</span></span> <span class="fr mgt5 gray6"><a href="#" title="Comment" target="_blank" class="imit_a" rel="nofollow">Comment</a><em class="gray9">(0)</em></span> </p>
+				  	</div>
+				 <div class="txtBox gray6">
+						<p class="fr gray9">10-24 15:27</p>
+						<p><a href="#" target="_blank" title="ChefMama" class="gray6" rel="nofollow"><img src="images/132530_22.jpg" width="22" height="22" alt="ChefMama">ChefMama</a></p>
+				 </div>
+			</li>
+		</ul>
+	</div>
+
+
+</div>
+
+</div>
+<script type="text/javascript">
+	var list = new Array();
+	function selectItem(self){
+		if(self.value!='Cuisine Type' && self.value!='Protein Type' &&  self.value!='Vegetables Type'){
+			if(list.indexOf(self.value)<=-1){
+				list.push(self.value);
+				$('#item-data').append('<span onclick="delItem(this)" data="'+self.value+'">'+self.value+'<i>X</i></span>')
+
+			}
+
+
+			if(list.length>0){
+				$('#search-ipt').show();
+			}
+		}
+	}
+
+
+	function delItem(self){
+		var i = list.indexOf($(self).attr('data'));
+		if(i>-1){
+			list.splice(i,1);
+			$(self).remove();
+
+			if(list.length<1){
+				$('#search-ipt').hide();
+			}
+		}
+	}
+
+
+
+</script>
+</body>
+</html>

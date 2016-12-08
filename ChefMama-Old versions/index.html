@@ -1,0 +1,141 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>My Homepage</title>
+<link href="css/font.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.slidertron-1.0.js"></script>
+</head>
+<body>
+<div id="wrapper" class="bg">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#"><b>Project: ChefMama</b></a></h1>
+				<p>Design by <a href="https://github.com/Zippylicious/ChefMama" rel="nofollow">Team ChefMama</a></p>
+			</div>
+		</div>
+		<div id="menu-wrapper">
+			<ul id="menu">
+				<li class="current_page_item"><a href="index.html"><span>Homepage</span></a></li>
+				<li><a href="recipe.html"><span>Recipe</span></a></li>
+				<li><a href="#"><span>Ingredients</span></a></li>
+				<li><a href="#"><span>Gourmet Master</span></a></li>
+				<li><a href="#"><span>Recipe Ranking</span></a></li>
+				<li><a href="contact.html"><span>Contact</span></a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<div id="banner">
+			<div id="slider"> <a href="#" class="button previous-button">&lt;</a> <a href="#" class="button next-button">&gt;</a>
+				<div class="viewer">
+					<div class="reel">
+						<div class="slide">
+							<h2>Explore our Thanksgiving Specials.</h2>
+							<p>Ranch-Seasoned Roast Turkey, Buttermilk-Boursin Mashed Potatoes, Orange Bourbon Cranberry Sauce...</p>
+							<a class="link" href="Thanksgiving">Full story ...</a><img src="images/img01.jpg" width="900" height="350" alt="" /></div>
+						<div class="slide">
+							<h2>Explore our Dessert Specials.</h2>
+							<p>Firnee Pudding, Dulce de Leche, Rocky Road Dessert...</p>
+							<a class="link" href="#">Full story ...</a><img src="images/img02.jpg" width="900" height="350" alt="" /></div>
+					</div>
+				</div>
+				<div class="indicator">
+					<ul>
+						<li class="active">1</li>
+						<li>2</li>
+					</ul>
+				</div>
+			</div>
+			
+			<form class="form-wrapper" action="recipe.html" style="margin-bottom: 0;">
+				<!--<input type="text" id="search" placeholder="Search for BBQ Ribs, California Roll, Mapo Tofu ..." required>-->
+				<select style="width:210px;height: 40px;font-size: 18px;" onchange="selectItem(this)">
+				    <option>Cuisine Type</option>
+					<option>American</option>
+					<option>Chinese</option>
+					<option>Indian</option>
+					<option>Italian</option>
+					<option>Japanese</option>
+					<option>Thai</option>
+					<option>Mexican</option>
+					<option>Thai</option>			
+				</select>
+				<select style="width:210px;height: 40px;font-size: 18px;" onchange="selectItem(this)">
+					<option>Protein Type</option>
+					<option>Beef</option>
+					<option>Chicken</option>
+					<option>Egg</option>
+					<option>Ham</option>
+					<option>Lamb</option>
+					<option>Milk</option>
+					<option>Pork</option>
+					<option>Steak</option>
+					<option>Salami</option>
+					<option>Sausages</option>
+				</select>
+				<select style="width:220px;height: 40px;font-size: 18px;" onchange="selectItem(this)">
+				    <option>Vegetables Type</option>
+					<option>Aubergine</option>
+					<option>Broccoli</option>
+					<option>Carrot</option>
+					<option>Garlic</option>
+					<option>Jerusalem artichoke</option>
+					<option>Mushroom</option>
+					<option>Pepper</option>
+					<option>Pumpkin</option>
+					<option>Watercress</option>
+				</select>
+	</form>
+
+
+	<form class="form-wrapper" action="recipe.html" style="margin-top: 10px;">
+	<input type="submit" value="search" id="submit">
+		<div id="item-data">
+			
+		</div>
+		
+	</form>
+		</div>
+	</div>
+
+<script type="text/javascript">
+		var list = new Array();
+		function selectItem(self){
+			if(self.value!='Cuisine Type' && self.value!='Protein Type' &&  self.value!='Vegetables Type'){
+				if(list.indexOf(self.value)<=-1){
+					list.push(self.value);
+					$('#item-data').append('<span onclick="delItem(this)" data="'+self.value+'">'+self.value+'<i>X</i></span>')
+	
+				}
+	
+			}
+		}
+
+		function delItem(self){
+			var i = list.indexOf($(self).attr('data'));
+			if(i>-1){
+				list.splice(i,1);
+				$(self).remove();
+			}
+		}
+	
+		$('#slider').slidertron({
+					viewerSelector: '.viewer',
+					reelSelector: '.viewer .reel',
+					slidesSelector: '.viewer .reel .slide',
+					advanceDelay: 3000,
+					speed: 'slow',
+					navPreviousSelector: '.previous-button',
+					navNextSelector: '.next-button',
+					indicatorSelector: '.indicator ul li',
+					slideLinkSelector: '.link'
+				});
+</script>
+</body>
+</html>

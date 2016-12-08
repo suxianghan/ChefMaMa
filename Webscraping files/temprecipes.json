@@ -1,0 +1,32 @@
+{"Recipes":
+[
+	{
+		"Name":"Broccoli",
+		"Ingredients":["Broccoli"],
+		"Instructions":"Eat raw",
+		"Serving Size":"1 Person",
+		"Categories":["None"]
+	},
+	{
+		"Name":"Cheese and Macaroni",
+		"Ingredients":["Cheese","Macaroni"],
+		"Instructions":"Eat raw",
+		"Serving Size":"1 Person",
+		"Categories":["Dinner"]
+	},
+	{
+		"Name":"Filet Mignon",
+		"Ingredients":["Beef","Salt"],
+		"Instructions":"Eat raw",
+		"Serving Size":"1 Person",
+		"Categories":["Dinner","Expensive"]
+	},
+	{
+		"Name":"Ketchup",
+		"Ingredients":["Tomato","Salt","Sugar","Pepper"],
+		"Instructions":"Eat raw",
+		"Serving Size":"1 Person",
+		"Categories":["Condiment"]
+	},
+]
+}

@@ -14,7 +14,7 @@ python -m SimpleHTTPServer 8888
 
 Just put all the file on your htdocs of MAMP, and click index.html
 
-##z3 About webscraper
+### About webscraper
 
 It is use to construct our json files which contains recipes information, we use the food API to writte the webscraper. See Webscraping files folder.
 

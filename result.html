@@ -10,19 +10,20 @@
         <div class= "section">
             <div class="top-border left"></div>
             <div class="top-border right"></div>
-            <div id = "search-ingre"><h1><span>ChefMaMa Primier menu</span></h1>
+            <div id = "search-ingre"><h1><span>ChefMaMa Menu</span></h1>
                 </div>
         <div id = "tester"></div>
         </div>
     </body>
     <script>
+        var IsEmpty = true;
         var animated_key = 0;
         var test_dict = {}
         var list = sessionStorage.getItem('list');
         var energy = list.split(",");
         for (var iterater = 0; iterater<energy.length;iterater++)
             $('<p>'+energy[iterater]+'<p>').appendTo("#description");
-        $.getJSON('http://localhost:8888/chefmama-master/data.json', function (js) {
+        $.getJSON('http://localhost:8888/ChefMaMa-master/recipes.json', function (js) {
             var hashtale = {}
             for (var iterater = 0; iterater<energy.length;iterater++)
             {
@@ -49,16 +50,22 @@
                         }        
                     }
                     if(uni == true){
+                        IsEmpty = false;
                         $("#tester").append('<p id = '+animated_key+' onclick="f1(this)">'+key+"</p>");
                         animated_key += 1;
                     }
                 }
             }
+            if(IsEmpty == true){
+                $("#tester").append('<p onclick="window.href = "index.html">VEADSCIUHBVE GUIRWTHIFWHFI  FIUABNIUVAGIVAER GHEIAURHGIUBEHAGRIFNCI ABVAERISGVISRBVAEIVN AWEHVTIUHGICWUEVHICUASHIV SHAC IUHARSIUF CIUHC IUHASIGUFDNAWFHUICQ CHAWIU VIUH FIAC BFIUBSAIVUN SAI VHIUHASR XIBCWCIAUC HFIWA BICGUFNAIUS CHIUGNFSAZ AVBNASIVCSAIUV</p>"');
+                $("#tester").append('<p onclick="window.href = "index.html">VBSDFCNIUAV ASUIFIHTGWFUAYC IFKVFGASZYICHKW GVANIC8UOA FCA AI7QBDWAFUVYZDIFHQ VAUXJC AJDAISKVHAFVSA FWQFSBIVUAVZNCAISUFCN KJFNAKFCSUOVNASC SINWAEF AZEAFHJC ASBZFUIFQKJFAZ NA OHFJAIF IVHAHAISHCSIDHFASS IUWAFHSCAI CNCAI8EFJ AVIANCIAWUGH AICBNIAUEHI IACNAIUV AUIHFWA</p>"');
+                $("#tester").append('<p onclick="window.href = "index.html">There is no recipes match your harsh requirement</p>"');
+            }
         }
       );
         function f1(objButton){  
             var choice = $("#"+objButton.id).text();
-            alert(choice);
+            alert("We love Zak Thompson");
             window.location = "recipe.html";
             sessionStorage.setItem('choice', choice);
         }

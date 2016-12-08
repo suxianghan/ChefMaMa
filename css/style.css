@@ -3,61 +3,56 @@
 \*-----------------------------------*/
 
 *{
-  
-  margin: 0;
-  padding: 0;
-  position: relative;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 input, select, button, textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  font: inherit;
-  color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: inherit;
 }
 
 /*-----------------------------------*\
-  $OBJECTS
+  $BUTTON
 \*-----------------------------------*/
 
 .butt, .input {
-  padding: .75rem;
-  margin: .375rem;
-
-  background-color: transparent;
-  border-radius: 4px;
+    padding: .75rem;
+    margin: .375rem;
+    background-color: transparent;
+    border-radius: 4px;
 }
 
-  .butt:focus, .input:focus {
+.butt:focus, .input:focus {
     outline: none;
-  }
+}
 
 .butt {
-  border: 2px solid #f35626;
-  line-height: 1.375;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  font-weight: 700;
-
-  color: #f35626;
-
-  cursor: pointer;
-  -webkit-animation: hue 60s infinite linear;
+    border: 2px solid #f35626;
+    line-height: 1.375;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 700;
+    color: #f35626;
+    cursor: pointer;
+    -webkit-animation: hue 60s infinite linear;
 }
 
-  .butt--primary {
+.butt--primary {
     background-color: #f35626;
     color: #fff;
-  }
+}
 
 .input {
-  border: 1px solid #c0c8c9;
-  border-radius: 4px;
+    border: 1px solid #c0c8c9;
+    border-radius: 4px;
 }
 
 /*-----------------------------------*\
@@ -65,74 +60,69 @@ input, select, button, textarea {
 \*-----------------------------------*/
 
 h1 {
-  margin-bottom: 1.5rem;
-
-  font-size: 3rem;
-  font-weight: 100;
-  line-height: 1;
-  letter-spacing: -.05em;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -.05em;
 }
 
 h2 {
-  margin-bottom: .75rem;
-
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1;
+    margin-bottom: .75rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 
 
 
 .subhead, .meta {
-  color: #7b8993;
+    color: #7b8993;
 }
 
-.promo {
-  text-align: center;
-}
 
 p, hr, form {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 hr {
-  border: none;
-  margin-top: -1px;
-  height: 1px;
-  background-color: #c0c8c9;
-  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+    border: none;
+    margin-top: -1px;
+    height: 1px;
+    background-color: #c0c8c9;
+    background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
 }
 
 a {
-  color: inherit;
-  text-decoration: underline;
-  -webkit-animation: hue 60s infinite linear;
+    color: inherit;
+    text-decoration: underline;
+    -webkit-animation: hue 60s infinite linear;
 }
 
-  a:hover {
+a:hover {
     color: #f35626;
-  }
+}
 
 /*-----------------------------------*\
   $LAYOUT
 \*-----------------------------------*/
 
 .wrap {
-  max-width: 38rem;
-  margin: 0 auto;
+    max-width: 38rem;
+    margin: 0 auto;
 }
 
 .island {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 .isle {
-  padding: .75rem;
+    padding: .75rem;
 }
 
 .spit {
-  padding: .375rem;
+    padding: .375rem;
 }
 
 /*-----------------------------------*\
@@ -140,16 +130,13 @@ a {
 \*-----------------------------------*/
 
 html {
-  font: 100%/1.5 "Roboto", Verdana, sans-serif;
-  color: #3d464d;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  width: 100%;
-
-  overflow: hidden-x;
-
-  /* Centering in The Unknown */
-  text-align: center;
+    font: 100%/1.5 "Roboto", Verdana, sans-serif;
+    color: #3d464d;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    overflow: hidden-x;
+    text-align: center;
 }
 
 @media (min-width: 650px) {
@@ -223,30 +210,4 @@ html {
       transform: translateY(0);
    }
 }
-@-webkit-keyframes bounceOutUp {
-            0% {
-               -webkit-transform: translateY(0);
-            }
-            20% {
-               opacity: 1;
-               -webkit-transform: translateY(20px);
-            }
-            100% {
-               opacity: 0;
-               -webkit-transform: translateY(-2000px);
-            }
-         }
          
-         @keyframes bounceOutUp {
-            0% {
-               transform: translateY(0);
-            }
-            20% {
-               opacity: 1;
-               transform: translateY(20px);
-            }
-            100% {
-               opacity: 0;
-               transform: translateY(-2000px);
-            }
-         }

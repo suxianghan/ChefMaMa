@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>My Homepage</title>
-        <link href="recipe_style.css" rel="stylesheet" type="text/css" />
+        <link href="css/recipe_style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet prefetch" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     </head>
@@ -35,25 +35,22 @@
             </div>
 
             <!-- Recipe Instructions-->
-            <!--并不知道怎么Remove Json Strong 里的 Back Slah, GG -->
             <div class="container" id = "description">
             </div>
 
-
-            <!--"这里是Footer 你觉得需要就Uncomment"-->
 
             <div class="footer">
                     <div class="container">
                             <hr class = "divider"/>
                             <div class="row">
                                     <div class = "footer">
-                                            <h3>Contact</h3>
+                                            <h3>Fantastic Portal</h3>
                                             <ul>
-                                                    <a href = "https://github.com/Zippylicious/ChefMama">
-                                                        <li>GitHub</li>
+                                                    <a href = "http://localhost:8888/chefmama-master/index.html">
+                                                        <li>Home</li>
                                                     </a>
-                                                    <a href = "https://www.facebook.com/groups/178017579300567/">
-                                                        <li>Facebook</li>
+                                                    <a href = "http://localhost:8888/chefmama-master/contact.html">
+                                                        <li>Contact</li>
                                                     </a>
                                             </ul>
                                     </div>
@@ -64,7 +61,7 @@
     <script>
         var choice = sessionStorage.getItem('choice');
         $("#recipe_name").html('<div class="main" id="recipe_name"><a href="https://github.com/Zippylicious/ChefMama" rel="nofollow" data-hover="ChefMaMa"><h1>'+choice+'</h1></a></div>');
-        $.getJSON('http://localhost:8888/chefmama-master/data.json', function (js) {
+        $.getJSON('http://localhost:8888/ChefMaMa-master/recipes.json', function (js) {
             for (var ingre_key in js[choice][0]){
                 $("#ingredients").append('<div class="col-md-2"><div class="image"><img src="'+js[choice][0][ingre_key].image+'"><div class="originalString">'+'<p> '+js[choice][0][ingre_key].originalString+'</p></div></div></div>');
             }

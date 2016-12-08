@@ -1,72 +1,83 @@
-* {
-  box-sizing: border-box;
+/*-----------------------------------*\
+  $DEFAULT
+\*-----------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+input, select, button, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: inherit;
+}
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
 body {
-  vertical-align: middle;
-  font-family: "PT Sans";
+    vertical-align: middle;
+    font-family: "PT Sans";
 }
 
 .section {
-  vertical-align: middle;
-  top:11%;
-  position: relative;
-  width: 900px;
-  max-width: 80%;
-  border: 2px solid #333;
-  border-top: none;
-  text-align: center;
-  margin: 0 auto;
+    vertical-align: middle;
+    top:12%;
+    position: relative;
+    width: 900px;
+    max-width: 80%;
+    border: 2px solid #333;
+    border-top: none;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .section h1 {
-  position: relative;
-  margin-top: -14px;
-  display: inline-block;
-  letter-spacing: 4px;
+    position: relative;
+    margin-top: -14px;
+    display: inline-block;
+    letter-spacing: 4px;
 }
 
 .top-border{
-  position: absolute;
-  height: 2px;
-  width: 24%;
-  background-color: #333;
+    position: absolute;
+    height: 2px;
+    width: 24%;
+    background-color: #333;
 }
 
 .right {
-  right: 0;
+    right: 0;
 }
 
 .left {
-  left: 0;
+    left: 0;
 }
-
-@media (max-width: 685px) {
-.top-border {	
-  width: 18%;
-	}
-}
-
+/*-----------------------------------*\
+  $TYPOGRAPHY
+\*-----------------------------------*/
 .section p {
-  width: 61%;
-  margin: 20px auto 20px auto;
-  line-height: 30px;
+    width: 61%;
+    margin: 20px auto 20px auto;
+    line-height: 30px;
 }
 
 .section a {
-  outline: 0;
-  display: inline-block;
-  padding: 20px;
-  margin-bottom: 40px;
-  width: 440px;
-  max-width: 80%;
-  background-color: #333;
-  color: #fff;
-  font-size: 22px;
-  letter-spacing: 3px;
-  transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
+    outline: 0;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 440px;
+    max-width: 80%;
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 3px;
 }
 
 p:hover {
@@ -75,24 +86,20 @@ p:hover {
     cursor: pointer;
     
 }
+/*-----------------------------------*\
+  $Animations
+\*-----------------------------------*/
 .section a:hover {
-  background-color: #1D222D;
+    background-color: #1D222D;
 }
 
 .section a:link, .section a:visited, .section a:link:hover, .section a:visited:hover {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
-h1:hover span {cursor:pointer;display:none}
-h1:hover:before {cursor:pointer;content:'"(￣▽￣)"Home"(￣▽￣)"'}
-@media (max-width: 500px) {
-  .top-border {	
-    display: none;
-  }
-  .section {
-  border-top: 2px solid #333;
-  }
-  .section h1 {
-    margin: 20px 6px;
-  }
+h1:hover span {
+    cursor:pointer;display:none
+}
+h1:hover:before {
+    cursor:pointer;content:'"(￣▽￣)"Home"(￣▽￣)"'
 }

@@ -1,3 +1,6 @@
+/*-----------------------------------*\
+  $DEFAULT
+\*-----------------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -7,19 +10,10 @@ html{
 body {
   font-family: "PT Sans";
 }
-.butt, .input {
-  padding: .75rem;
-  margin: .375rem;
 
-  background-color: transparent;
-  border-radius: 4px;
-}
-
-  .butt:focus, .input:focus {
-    outline: none;
-  }
-
-
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
 .section {
   top: 10%;
   position: relative;
@@ -30,13 +24,6 @@ body {
   text-align: center;
   margin: 60px auto;
     
-}
-
-.section h1 {
-  position: relative;
-  margin-top: -14px;
-  display: inline-block;
-  letter-spacing: 4px;
 }
 
 .top-border{
@@ -54,51 +41,62 @@ body {
   left: 0;
 }
 
-@media (max-width: 685px) {
-.top-border {	
-  width: 18%;
-	}
+/*-----------------------------------*\
+  $TYPOGRAPHY
+\*-----------------------------------*/
+.section h1 {
+  position: relative;
+  margin-top: -14px;
+  display: inline-block;
+  letter-spacing: 4px;
 }
-
 .section p {
   width: 61%;
   margin: 20px auto 40px auto;
   line-height: 30px;
 }
-
-.section a {
-  outline: 0;
-  display: inline-block;
-  padding: 20px;
-  margin-bottom: 40px;
-  width: 440px;
-  max-width: 80%;
-  background-color: #333;
-  color: #fff;
-  font-size: 22px;
-  letter-spacing: 3px;
-  transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
+a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
 }
 
-.section a:hover {
-  background-color: #1D222D;
-}
-
-.section a:link, .section a:visited, .section a:link:hover, .section a:visited:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-@media (max-width: 500px) {
-  .top-border {	
-    display: none;
+  a:hover {
+    color: #f35626;
   }
-  .section {
-  border-top: 2px solid #333;
-  }
-  .section h1 {
-    margin: 20px 6px;
-  }
+/*-----------------------------------*\
+  $BUTTON
+\*-----------------------------------*/
+.section #hyper {
+    outline: 0;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 440px;
+    max-width: 80%;
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
 }
+
+.section #hyper:hover {
+    background-color: #1D222D;
+}
+.butt, .input {
+    padding: .75rem;
+    margin: .375rem;
+    background-color: transparent;
+    border-radius: 4px;
+}
+.butt:focus, .input:focus {
+    outline: none;
+}
+.section #hyper:link, .section #hyper:visited, .section #hyper:link:hover, .section #hyper:visited:hover {
+    text-decoration: none;
+    color: #fff;
+}
+

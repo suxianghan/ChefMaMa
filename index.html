@@ -14,21 +14,30 @@
    <span id="animationSandbox"><h1 class="site__title ">ChefMaMa</h1></span>
     <span class=" subhead">Incredible ingredient-recipe navigation</span>
   </div>
-</header><!-- /.site__header -->
+</header>
 <div class = "background">
 <main class="site__content island" role="content">
   <div class="wrap">
     <form id = "ingre-form">
       <select class="input" onchange="selectItem(this)">
-        <optgroup label="Bouncing Entrances">
-            <option value="bounceIn">--Default Ingredients--</option>
+        <optgroup label="Main course">
+            <option value="--Main course--">--Main course--</option>
             <option value="chicken">chicken</option>
-            <option value="meat">meat</option>
-            <option value="sugar">sugar</option>
-            <option value="onion">onion</option>
+            <option value="garlic">garlic</option>
+            <option value="scallop">scallop</option>
+            <option value="salmon">salmon</option>
+            <option value="beef">beef</option>
+            <option value="shrimp">shrimp</option>
+            <option value="cs196">cs196</option>
+        </optgroup>
+          <optgroup label="Sauce">
+            <option value="Sauce">--Sauce--</option>
+            <option value="pepper">pepper</option>
+            <option value="syrup">syrup</option>
+            <option value="lemon">lemon</option>
             <option value="milk">milk</option>
-            <option value="water">water</option>
-            <option value="cs125">cs125</option>
+            <option value="onion">onion</option>
+            <option value="cs196">cs196</option>
         </optgroup>
       </select>
       <button class="butt" id = "post"  type="button">MAGIC</button>
@@ -37,20 +46,18 @@
     <div id="item-data">
     </div>
     <hr />
-    <p class="meta"><a href="https://raw.github.com/daneden/animate.css/master/animate.css" download="animate.css">See our previous version</a> or <a href="//github.com/daneden/animate.css">Download our Source code</a></p>
+    <p class="meta"><a href="https://github.com/Zippylicious/ChefMama">See our previous version</a> or <a href="download/ChefMaMa-master.zip" download ="ChefMaMa-master.zip">Download our Source code</a></p>
     <p><small>A semester-long project from <a href="contact.html">CS196</a>.</small></p>
     <div id = "term-result">
         <p><small>Here are the result history array of the Ingredients</small></p>
       </div>
   </div>
-    <a href="javascript:void(0);" id="store">Store Array</a>
 </main>
     </div>
     </div>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
 <script>
-
 		var list = new Array();
         var begin = false;
         var coup = 0;
@@ -80,13 +87,6 @@
 			}
             localStorage.setItem('list', window.JSON.stringify(list));
 		}
-        function wait(ms){
-           var start = new Date().getTime();
-           var end = start;
-           while(end < start + ms) {
-             end = new Date().getTime();
-          }
-        }
 </script>
 </body>
 </html>
